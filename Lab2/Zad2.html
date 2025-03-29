@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja Hotelu</title>
+</head>
+<body>
+    <h1>Formularz Rezerwacji Hotelu</h1>
+
+    <form action="Zad2.php" method="post">s
+        <h3>Dane osoby rezerwującej:</h3>
+
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie" required>
+        <br><br>
+
+        <label for="nazwisko">Nazwisko:</label>
+        <input type="text" id="nazwisko" name="nazwisko" required>
+        <br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="adres">Adres:</label>
+        <input type="text" id="adres" name="adres" required>
+        <br><br>
+
+        <label for="karta_kredytowa">Numer karty kredytowej:</label>
+        <input type="text" id="karta_kredytowa" name="karta_kredytowa" required pattern="[0-9]{16}" title="Wprowadź 16-cyfrowy numer karty kredytowej">
+        <br><br>
+
+        <h3>Szczegóły pobytu:</h3>
+
+        <label for="osoby">Ilość osób:</label>
+        <select id="osoby" name="osoby" required>
+            <option value="1">1 osoba</option>
+            <option value="2">2 osoby</option>
+            <option value="3">3 osoby</option>
+            <option value="4">4 osoby</option>
+        </select>
+        <br><br>
+
+        <label for="data_przyjazdu">Data przyjazdu:</label>
+        <input type="date" id="data_przyjazdu" name="data_przyjazdu" required>
+        <br><br>
+
+        <label for="data_wyjazdu">Data wyjazdu:</label>
+        <input type="date" id="data_wyjazdu" name="data_wyjazdu" required>
+        <br><br>
+
+        <label for="godzina_przyjazdu">Godzina przyjazdu:</label>
+        <input type="time" id="godzina_przyjazdu" name="godzina_przyjazdu" required>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="dostawka" value="tak">
+            Potrzebuję dostawki dla dziecka
+        </label>
+        <br><br>
+
+        <label for="udogodnienia">Udogodnienia (możesz wybrać kilka):</label><br>
+        <input type="checkbox" id="klimatyzacja" name="udogodnienia[]" value="Klimatyzacja"> Klimatyzacja<br>
+        <input type="checkbox" id="popielniczka" name="udogodnienia[]" value="Popielniczka"> Popielniczka dla palacza<br>
+        <input type="checkbox" id="wifi" name="udogodnienia[]" value="Wi-Fi"> Wi-Fi<br>
+        <input type="checkbox" id="balkon" name="udogodnienia[]" value="Balkon"> Balkon<br>
+        <br>
+
+        <button type="submit">Zarezerwuj</button>
+    </form>
+</body>
+</html>
