@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator PHP</title>
+</head>
+<body>
+
+    <h1>Prosty kalkulator</h1>
+
+    <form action="Zad1a.php" method="post">
+        <label for="liczba1">Liczba 1:</label>
+        <input type="number" id="liczba1" name="liczba1" step="any" required>
+        <br><br>
+
+        <label for="liczba2">Liczba 2:</label>
+        <input type="number" id="liczba2" name="liczba2" step="any" required>
+        <br><br>
+
+        <label for="dzialanie">Wybierz działanie:</label>
+        <select id="dzialanie" name="dzialanie" required>
+            <option value="dodawanie">Dodawanie</option>
+            <option value="odejmowanie">Odejmowanie</option>
+            <option value="mnozenie">Mnożenie</option>
+            <option value="dzielenie">Dzielenie</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Oblicz</button>
+    </form>
+
+</body>
+</html>
